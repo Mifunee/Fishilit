@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fishilit</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #c8e1fa; /* biru muda elegan */
+        margin: 0;
+        padding: 0;
+        min-height: 150vh; /* >>> BIKIN BACKGROUND LEBIH PANJANG KE BAWAH <<< */
+        padding-bottom: 150px; /* ruang agar tidak ketutup checkout bar */
+      }
+
+      header {
+        background-color: #4ea4ff;
+        padding: 50px;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .product-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .product-card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-card h3 {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #003b73;
+      }
+
+      .price {
+        font-size: 18px;
+        color: #0074cc;
+        margin: 5px 0 15px;
+        font-weight: bold;
+      }
+
+      .btn {
+        background-color: #4ea4ff;
+        padding: 10px 15px;
+        border: none;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #1e8cff;
+      }
+
+      .checkout-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 15px;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .checkout-bar span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #003b73;
+      }
+
+      .cart-icon {
+        font-size: 28px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Fishilit</header>
+
+    <div class="product-container">
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/vxHjZ9gm/el-maja-memek.png" />
+        <h3>Big Elshark Grand Maja Max Ton</h3>
+        <h3>Stock(2)</h3>
+        <div class="price">Rp 55.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/35cCm17J/maja-biasa.png" />
+        <h3>Elshark Grand Maja</h3>
+        <h3>Stock(1)</h3>
+        <div class="price">Rp 25.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/ymvsTQMT/lochness.png" />
+        <h3>Lochness Monster</h3>
+        <h3>Stock(2)</h3>
+        <div class="price">Rp 30.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/BHz1WQPH/blop.png" />
+        <h3>Blob Shark</h3>
+        <h3>Stock(4)</h3>
+        <div class="price">Rp 5.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/0RRhkMmv/frostborn.png" />
+        <h3>Frostborn Shark</h3>
+        <h3>Stock(3)</h3>
+        <div class="price">Rp 7.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/dJpg3L5N/strawberry-mega.png" />
+        <h3>Strawberry Choco Megalodon (Limited Fish)</h3>
+        <h3>Stock(1)</h3>
+        <div class="price">Rp 40.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/DPV19Sc4/king-jelly.png" />
+        <h3>King Jelly</h3>
+        <h3>Stock(2)</h3>
+        <div class="price">Rp 7.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/0Rc52Dd9/koin.png" />
+        <h3>1M COIN</h3>
+        <h3>Stock(10)</h3>
+        <div class="price">Rp 5.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co.com/fY1njZYW/tralalelo.png" />
+        <h3>Tralero Tralala</h3>
+        <h3>Stock(2)</h3>
+        <div class="price">Rp 10.000</div>
+        <button class="btn">Tambah ke Keranjang</button>
+      </div>
+    </div>
+
+    <!-- CHECKOUT BAR -->
+    <div class="checkout-bar">
+      <span><span class="cart-icon">🛒</span> Keranjang (0)</span>
+      <a href="https://wa.me/62859501099235" target="_blank" class="btn">Checkout via WA</a>
+
+      </a>
+    </div>
+  </body>
+</html>
